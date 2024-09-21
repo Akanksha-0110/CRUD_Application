@@ -20,16 +20,18 @@
       <th>Phone</th>
       <th>Action</th>
     </tr>
-    <tr>
-      <td>{{emp['id']}}</td>
-      <td>{{emp['name']}}</td>
-      <td>{{emp['email']}}</td>
-      <td>{{emp['phone']}}</td>
-      <td>
-        <a href="/Update">Edit</a>
-        <a href="/Delete">Delete</a>
-      </td>
-    </tr>
+    {% for emplo in empl %}
+      <tr>
+          <td>{{emplo['id']}}</td>
+          <td>{{emplo['name']}}</td>
+          <td>{{emplo['email']}}</td>
+          <td>{{emplo['phone']}}</td>
+          <td>
+            <a href="/Update">Edit</a>
+            <a href="/Delete">Delete</a>
+          </td> 
+      </tr>
+    {% endfor %}  
   </table>
   </div>
 {% endblock %}
