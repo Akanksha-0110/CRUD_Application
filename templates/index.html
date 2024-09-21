@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %} Flask CRUD {% endblock %}
+
+{% block body %} 
+{% include 'header.html' %}
+<div style="background-color: gray; height:50px; margin:20px 100px 0px 100px; color: black; display:flex;">
+  <div style="width:50%; display: flex; align-items: center; justify-content:center">
+    <h2>Manage <b>Employees</b></h2>
+  </div>
+  <div style="width:50%; display:flex; justify-content: flex-end; align-items: center; margin-right: 10px;">
+    <a href='/AddEmployee'><button style="background-color: #04AA6D; color: white;  border: none; height:30px;" type="button">Add New Employee</button></a>
+  </div>
+</div>
+<div style="margin: 0 100px 0 100px">
+  <table id="emp">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Action</th>
+    </tr>
+    <tr>
+      <td>{{emp['id']}}</td>
+      <td>{{emp['name']}}</td>
+      <td>{{emp['email']}}</td>
+      <td>{{emp['phone']}}</td>
+      <td>
+        <a href="/Update">Edit</a>
+        <a href="/Delete">Delete</a>
+      </td>
+    </tr>
+  </table>
+  </div>
+{% endblock %}

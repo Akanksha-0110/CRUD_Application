@@ -1,0 +1,22 @@
+#emp {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#emp td, #emp th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#emp tr:nth-child(even){background-color: #f2f2f2;}
+
+#emp tr:hover {background-color: #ddd;}
+
+#emp th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: black;
+  color: white;
+}
