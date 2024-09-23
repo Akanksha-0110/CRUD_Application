@@ -1,13 +1,15 @@
 <div style="display: flex; justify-content: center;">
-    <form action="/Success" method="post">
-        <h1>Update Employee Details</h1><br>
-        <label>Name:</label><br>
-        <input type="text" name="name"><br>
-        <label>Email:</label><br>
-        <input type="text" name="email"><br>
-        <label>Phone:</label><br>
-        <input type="text" name="phone"><br><br>
-        <input type="submit">
-        <a href="/"><button type="button">Close</button></a>
-    </form>
+    {% for empl in emp %}
+        <form action="/Updated/{{id}}" method="post">
+            <h1>Update Employee {{id}} Details</h1><br>
+            <label>Name:</label><br>
+            <input type="text" name="name" value={{empl.name}}><br>
+            <label>Email:</label><br>
+            <input type="text" name="email" value={{empl.email}}><br>
+            <label>Phone:</label><br>
+            <input type="text" name="phone" value={{empl.phone}}><br><br>
+            <input type="submit">
+            <a href="/"><button type="button">Close</button></a>
+        </form>
+    {% endfor %}
 </div>

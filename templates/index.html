@@ -27,8 +27,8 @@
           <td>{{emplo['email']}}</td>
           <td>{{emplo['phone']}}</td>
           <td>
-            <a href="/Update">Edit</a>
-            <a href="/Delete">Delete</a>
+            <a href="/Update/{{emplo['id']}}">Edit</a>
+            <a href="/Delete/{{emplo['id']}}">Delete</a>
           </td> 
       </tr>
     {% endfor %}  
